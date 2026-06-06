@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Axios instance oluştur
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || '/api',
 });
 
 // Request Interceptor: Her istekte token ekler
